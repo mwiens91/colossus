@@ -69,6 +69,10 @@ class AnalysisInformationForm(ModelForm):
         }
     def __init__(self, *args, **kwargs):
         library = kwargs.pop('library')
+
+        # Always select the most recent workflow
+        kwargs['initial']['version'] = DlpAnalysisVersion.objects.latest('pk')
+
         super(AnalysisInformationForm, self).__init__(*args, **kwargs)
         self.fields['sequencings'].widget = widgets.CheckboxSelectMultiple()
         self.fields['sequencings'].queryset = DlpSequencing.objects.filter(library__pk=library.pk)
