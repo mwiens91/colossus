@@ -142,6 +142,7 @@ AdditionalSampleInfoInlineFormset =  inlineformset_factory(
     Sample,
     AdditionalSampleInformation,
     form = SaveDefault,
+    can_delete = False,
     fields = "__all__",
     widgets = {
         'patient_biopsy_date': SelectDateWidget(
@@ -327,6 +328,7 @@ DlpLibrarySampleDetailInlineFormset = inlineformset_factory(
     DlpLibrary,
     DlpLibrarySampleDetail,
     form = SaveDefault,
+    can_delete = False,
     fields = "__all__",
     widgets = {
         'sample_spot_date': SelectDateWidget(
@@ -340,6 +342,7 @@ DlpLibraryConstructionInfoInlineFormset =  inlineformset_factory(
     DlpLibrary,
     DlpLibraryConstructionInformation,
     form = SaveDefault,
+    can_delete = False,
     fields = "__all__",
     widgets = {
         'library_prep_date': SelectDateWidget(
@@ -353,6 +356,7 @@ DlpLibraryQuantificationAndStorageInlineFormset =  inlineformset_factory(
     DlpLibrary,
     DlpLibraryQuantificationAndStorage,
     form = DlpLibraryQuantificationAndStorageForm,
+    can_delete = False,
     fields = "__all__",
     help_texts = {
         'agilent_bioanalyzer_xad': ('Select a xad file to upload.'),
@@ -374,6 +378,7 @@ PbalLibrarySampleDetailInlineFormset = inlineformset_factory(
     PbalLibrary,
     PbalLibrarySampleDetail,
     form = SaveDefault,
+    can_delete = False,
     fields = "__all__",
     widgets = {
         'sample_spot_date': SelectDateWidget(
@@ -387,6 +392,7 @@ PbalLibraryConstructionInfoInlineFormset =  inlineformset_factory(
     PbalLibrary,
     PbalLibraryConstructionInformation,
     form = SaveDefault,
+    can_delete = False,
     fields = "__all__",
     widgets = {
         'submission_date': SelectDateWidget(
@@ -400,6 +406,7 @@ PbalLibraryQuantificationAndStorageInlineFormset =  inlineformset_factory(
     PbalLibrary,
     PbalLibraryQuantificationAndStorage,
     form = PbalLibraryQuantificationAndStorageForm,
+    can_delete = False,
     fields = "__all__",
 )
 
@@ -417,6 +424,7 @@ TenxLibrarySampleDetailInlineFormset = inlineformset_factory(
     TenxLibrary,
     TenxLibrarySampleDetail,
     form = SaveDefault,
+    can_delete = False,
     fields = "__all__",
     widgets = {
         'sample_prep_date': SelectDateWidget(
@@ -430,6 +438,7 @@ TenxLibraryConstructionInfoInlineFormset =  inlineformset_factory(
     TenxLibrary,
     TenxLibraryConstructionInformation,
     form = SaveDefault,
+    can_delete = False,
     fields = "__all__",
     widgets = {
         'submission_date': SelectDateWidget(
@@ -442,6 +451,7 @@ TenxLibraryConstructionInfoInlineFormset =  inlineformset_factory(
 TenxLibraryQuantificationAndStorageInlineFormset =  inlineformset_factory(
     TenxLibrary,
     TenxLibraryQuantificationAndStorage,
+    can_delete = False,
     form = TenxLibraryQuantificationAndStorageForm,
     fields = "__all__",
 )
@@ -493,6 +503,7 @@ DlpSequencingDetailInlineFormset = inlineformset_factory(
     DlpSequencing,
     DlpSequencingDetail,
     form = SaveDefault,
+    can_delete = False,
     fields = "__all__",
 )
 
@@ -505,6 +516,7 @@ PbalSequencingDetailInlineFormset = inlineformset_factory(
     PbalSequencing,
     PbalSequencingDetail,
     form = SaveDefault,
+    can_delete = False,
     fields = "__all__",
 )
 
@@ -517,6 +529,7 @@ TenxSequencingDetailInlineFormset = inlineformset_factory(
     TenxSequencing,
     TenxSequencingDetail,
     form = SaveDefault,
+    can_delete = False,
     fields = "__all__",
 )
 
