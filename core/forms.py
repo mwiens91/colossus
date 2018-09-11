@@ -38,6 +38,7 @@ from .models import (
     DlpLibrary,
     PbalLibrary,
     TenxLibrary,
+    TenxCondition,
     SublibraryInformation,
     DlpLibrarySampleDetail,
     DlpLibraryConstructionInformation,
@@ -455,6 +456,11 @@ TenxLibraryQuantificationAndStorageInlineFormset =  inlineformset_factory(
     form = TenxLibraryQuantificationAndStorageForm,
     fields = "__all__",
 )
+
+TenxConditionFormset = forms.modelformset_factory(
+    TenxCondition,
+    exclude=('library', 'sample', 'condition_id'),
+    extra=0)
 
 
 #===========================
