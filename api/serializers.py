@@ -163,6 +163,7 @@ class AnalysisInformationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = DlpAnalysisInformation
+        lookup_field = 'analysis_jira_ticket'
         fields = (
             'id',
             'library',

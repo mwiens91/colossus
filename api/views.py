@@ -164,6 +164,7 @@ class AnalysisInformationViewSet(viewsets.ModelViewSet):
     serializer_class = AnalysisInformationSerializer
     permission_classes = (IsAuthenticatedOrReadOnly,)
     filter_class = AnalysisInformationFilter
+    lookup_field = 'analysis_jira_ticket'
 
 
 class AnalysisRunViewSet(viewsets.ModelViewSet):
